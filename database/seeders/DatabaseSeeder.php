@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            AdminDatabaseSeeder::class
+            AdminDatabaseSeeder::class,
+            TeamMemberSeeder::class,
         ]);
     }
 }

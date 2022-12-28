@@ -28,6 +28,7 @@ class AdminDatabaseSeeder extends Seeder
         $this->call([
             SettingTableSeeder::class,
             TextTableSeeder::class,
+            PageImageTableSeeder::class,
         ]);
     }
 }

@@ -10,6 +10,7 @@ trait ForgetCache
 
         self::created(fn () => static::forgetCache());
         self::updated(fn () => static::forgetCache());
+        self::deleted(fn () => static::forgetCache());
     }
 
     protected static function forgetCache()

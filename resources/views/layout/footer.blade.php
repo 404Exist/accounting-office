@@ -40,16 +40,14 @@
             </div>
             {{-- col #2 --}}
             <div class="col-md-3 mb-4">
-                <h6>
-                    <a href="{{ route('offer') }}"> {!! getText('offer') !!}</a>
-                </h6>
+                <h6>{!! getText('offer') !!}</h6>
                 <a href="{{ route('full_accountancy') }}">{!! getText('full_accountancy') !!}</a>
                 <br />
-                <a href="{{ route('kpir_accounting') }}">{!! getText('kpir_accounting') !!}</a>
+                <a href="{{ route('ledger') }}">{!! getText('ledger') !!}</a>
                 <br />
-                <a href="{{ route('lump_sum_accounting') }}">{!! getText('lump_sum_accounting') !!}</a>
+                <a href="{{ route('registerd_lump_sum') }}">{!! getText('registerd_lump_sum') !!}</a>
                 <br />
-                <a href="{{ route('managing_hR_and_payroll') }}">{!! getText('managing_hR_and_payroll') !!}</a>
+                <a href="{{ route('hr_and_payroll') }}">{!! getText('hr_and_payroll') !!}</a>
                 <br />
                 <a href="{{ route('establishment_of_the_company') }}">{!! getText('establishment_of_the_company') !!}</a>
                 <br />

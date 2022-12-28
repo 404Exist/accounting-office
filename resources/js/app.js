@@ -7,3 +7,6 @@ AOS.init({
     once: true,
     duration: 1200,
 });
+
+
+window.onload = () => document.getElementById("pageLoader").classList.add("hide-loader")

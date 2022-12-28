@@ -14,5 +14,6 @@ class Text extends Model
     protected $fillable = [
         'key',
         'value',
+        'page',
     ];
 }

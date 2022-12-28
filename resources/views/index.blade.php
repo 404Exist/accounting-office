@@ -1,8 +1,8 @@
-@extends('layout.app', ['theme' => 'dark'])
+@extends('layout.app', ['theme' => 'dark', "title" => getText("home")])
 
 @section('content')
 {{-- INTRO STARTS HERE --}}
-<div class="vh-100 intro" style="background-image: url({{ asset('assets/zadowolony-klient-LemonTax-fin-.jpg') }})">
+<div class="vh-100 intro" style="background-image: url({{ getPageImage(1) }})">
     <div class="overlay position-absolute top-0 bottom-0 start-0 end-0"></div>
     <div class="container text-center d-flex h-100 justify-content-center align-items-center flex-column content">
         <h1 class="mt-md-4 z-1 text-uppercase">
@@ -10,7 +10,7 @@
             <span class="text-primary-color fw-light">{!! getText('again') !!}</span>
         </h1>
         <div class="row buttons-container text-uppercase fs-2 z-1">
-            <a href="#" class="col-md-4 btn-container">
+            <a href="{{ route('full_accountancy') }}" class="col-md-4 btn-container">
                 <div class="p-2 btn-child-1">
                     <div>{!! getText('i_am_looking_for_a_service') !!}</div>
                     <div class="fw-bold">{!! getText('accountant') !!}</div>
@@ -21,7 +21,7 @@
                     <div>{!! getText('our_offer') !!}</div>
                 </div>
             </a>
-            <a href="#" class="col-md-4 btn-container">
+            <a href="{{ route('establishment_of_the_company') }}" class="col-md-4 btn-container">
                 <div class="p-2 btn-child-1">
                     <div>{!! getText('i_want_to_put') !!}</div>
                     <div class="fw-bold">{!! getText('company') !!}</div>
@@ -32,7 +32,7 @@
                     <div>{!! getText('we_help_you') !!}!</div>
                 </div>
             </a>
-            <a href="#" class="col-md-4 btn-container">
+            <a href="{{ route('tax_consultancy') }}" class="col-md-4 btn-container">
                 <div class="p-2 btn-child-1">
                     <div>{!! getText('i_am_looking_for_an_advisor') !!}</div>
                     <div class="fw-bold">{!! getText('tax') !!}</div>
@@ -66,7 +66,7 @@
                 </a>
             </div>
         </div>
-        <div class="looking-for-accountant pt-5" style="background-image: url({{ asset('assets/accountant-section-bg.png') }})">
+        <div class="looking-for-accountant pt-5" style="background-image: url({{ getPageImage(2) }})">
             <div class="container pt-5 w-75">
                 <div class="row pt-5">
                     <div class="col-md-6 pt-5">
@@ -78,10 +78,10 @@
                                 {!! getText('looking_for_an_accountant_home_text') !!}
                             </div>
                         </div>
-                        <div class="bg-image" data-aos="fade-right" style="background-image: url({{ asset('assets/kpir-lemontax.jpg') }})">
+                        <div class="bg-image" data-aos="fade-right" style="background-image: url({{ getPageImage(3) }})">
                             <div class="overlay position-absolute top-0 bottom-0 start-0 end-0"></div>
                             <div class="z-1 d-flex justify-content-center" data-aos="fade-up">
-                                <a href="{{ route('kpir_accounting') }}" class="btn-container text-uppercase">
+                                <a href="{{ route('ledger') }}" class="btn-container text-uppercase">
                                     <div class="p-3 btn-child-left-1">{!! getText('find_out_more') !!}</div>
 
                                     <div class="p-3 btn-child-left-2 bg-primary-color">{!! getText('get_to_know_us_better') !!}</div>
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 pt-5">
-                        <div class="bg-image" data-aos="fade-left" style="background-image: url({{ asset('assets/Wirtualne-biuro-LemonTax.jpg') }})">
+                        <div class="bg-image" data-aos="fade-left" style="background-image: url({{ getPageImage(4) }})">
                             <div class="overlay position-absolute top-0 bottom-0 start-0 end-0"></div>
                             <div class="z-1 d-flex justify-content-center" data-aos="fade-up">
                                 <a href="{{ route('full_accountancy') }}" class="btn-container text-uppercase">
@@ -113,8 +113,8 @@
                     <div class="col-md-4">
                         <div class="bg-image bg-secondary-color" data-aos="fade-right">
                             <div class="z-1 d-flex justify-content-center" data-aos="fade-up">
-                                <a href="{{ route('managing_hR_and_payroll') }}" class="btn-container text-uppercase">
-                                    <div class="p-3 btn-child-left-1">{!! getText('managing_hR_and_payroll') !!}</div>
+                                <a href="{{ route('hr_and_payroll') }}" class="btn-container text-uppercase">
+                                    <div class="p-3 btn-child-left-1">{!! getText('hr_and_payroll') !!}</div>
 
                                     <div class="p-3 btn-child-left-2 bg-primary-color">{!! getText('find_out_more') !!}</div>
                                 </a>
@@ -122,7 +122,7 @@
                         </div>
                     </div>
                     <div class="col-md-8">
-                        <div class="bg-image" data-aos="fade-left" style="background-image: url({{ asset('assets/Wirtualne-biuro-LemonTax.jpg') }})">
+                        <div class="bg-image" data-aos="fade-left" style="background-image: url({{ getPageImage(5) }})">
                             <div class="overlay position-absolute top-0 bottom-0 start-0 end-0"></div>
                             <div class="z-1 d-flex justify-content-center" data-aos="fade-up">
                                 <a href="{{ route('establishment_of_the_company') }}" class="btn-container text-uppercase">
@@ -294,7 +294,7 @@
             </div>
         </div>
         <div class="d-flex justify-content-center" data-aos="fade-up">
-            <a href="{{ route('find_out_more') }}" class="btn-container text-uppercase">
+            <a href="{{ route('about_us') }}" class="btn-container text-uppercase">
                 <div class="p-3 btn-child-1 bg-secondary-color">{!! getText('find_out_more') !!}</div>
 
                 <div class="p-3 btn-child-2 bg-primary-color">{!! getText('get_to_know_us_better') !!}</div>
@@ -315,9 +315,9 @@
             <div data-aos="zoom-in">{!! getText('accounting_office_home_text_2') !!}</div>
         </div>
         <div class="row">
-            <div class="col-md-6 tablet-img" data-aos="fade-right" style="background-image: url({{ asset('assets/tablet-mockup.png') }})">
+            <div class="col-md-6 tablet-img bg-dark-white" data-aos="fade-right" style="background-image: url({{ getPageImage(6) }})">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 py-5">
                 <h2 class="display-2 mb-4" data-aos="fade-down">
                     <span class="fw-bold">{!! getText('free') !!}</span>
                     <br />
@@ -336,7 +336,8 @@
 {{-- THIRD SECTION ENDS HERE --}}
 {{-- FOURTH SECTION STARTS HERE --}}
 <section class="pt-0">
-    <div class="virtual-office" style="background-image: url({{ asset('assets/Wirtualne-biuro-LemonTax.jpg') }})">
+
+    <div class="virtual-office" style="background-image: url({{ getPageImage(7) }})">
         <div class="container">
             <div class="col-md-5">
                 <div class="overlay">
@@ -359,30 +360,30 @@
 {{-- FOURTH SECTION ENDS HERE --}}
 {{-- FIVTH SECTION STARTS HERE --}}
 <section>
- <div class="interesting container">
-    <div class="row align-items-center">
-        <div class="img-container col-md-6" data-aos="fade-right">
-            <img class="img-fluid" src="{{ asset('assets/laptop-kontakt1-lemontatx.png') }}" />
-        </div>
-        <div class="col-md-5 ms-auto">
-            <h2 class="display-2 mb-4" data-aos="fade-down">
-                {!! getText('interesting') !!}
-            </h2>
-            <div class="display-6 mb-4" data-aos="zoom-in">{!! getText('the_next_step_is_up_to_you') !!}</div>
-            <div class="d-flex justify-content-left" data-aos="fade-up">
-                <a href="{{ route('contact') }}" class="btn-container text-uppercase" style="min-width: 35%;">
-                    <div class="p-3 btn-child-1 bg-secondary-color">
-                        <span class="fw-bold">{!! getText('write') !!}</span>
-                        <span>{!! getText('to_us') !!}</span>
-                    </div>
+    <div class="interesting container">
+        <div class="row align-items-center">
+            <div class="img-container col-md-6" data-aos="fade-right">
+                <img class="img-fluid" src="{{ getPageImage(8) }}" />
+            </div>
+            <div class="col-md-5 ms-auto">
+                <h2 class="display-2 mb-4" data-aos="fade-down">
+                    {!! getText('interesting') !!} ?
+                </h2>
+                <div class="display-6 mb-4" data-aos="zoom-in">{!! getText('the_next_step_is_up_to_you') !!}</div>
+                <div class="d-flex justify-content-left" data-aos="fade-up">
+                    <a href="{{ route('contact') }}" class="btn-container text-uppercase" style="min-width: 35%;">
+                        <div class="p-3 btn-child-1 bg-secondary-color">
+                            <span class="fw-bold">{!! getText('write') !!}</span>
+                            <span>{!! getText('to_us') !!}</span>
+                        </div>
 
-                    <div class="p-3 btn-child-2 bg-primary-color">{!! getText('contact') !!}</div>
-                </a>
+                        <div class="p-3 btn-child-2 bg-primary-color">{!! getText('contact') !!}</div>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-</div>
+    </div>
 </section>
 {{-- FIVTH SECTION ENDS HERE --}}
 @endsection

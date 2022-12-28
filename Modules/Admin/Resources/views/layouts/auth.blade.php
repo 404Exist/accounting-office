@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/admin/css/style.css') }}">
     <title>@yield('title') | {{ config('app.name') }} Admin Module</title>
+    @vite('Resources/assets/css/app.css', 'build-admin')
     @datatableScript
 </head>
 

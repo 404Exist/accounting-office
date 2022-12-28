@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22f405044dad1b4797a2142f199705da",
+    "content-hash": "764b39eef837925d310173a2fb97edec",
     "packages": [
         {
             "name": "brick/math",
@@ -432,6 +432,72 @@
                 }
             ],
             "time": "2022-06-18T20:57:19+00:00"
+        },
+        {
+            "name": "exist404/datatable-cruds",
+            "version": "1.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/404Exist/laravel-datatable-cruds.git",
+                "reference": "7641fe4fbd461c059849b123d86b4e7c28f7e573"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/404Exist/laravel-datatable-cruds/zipball/7641fe4fbd461c059849b123d86b4e7c28f7e573",
+                "reference": "7641fe4fbd461c059849b123d86b4e7c28f7e573",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">= 6.0",
+                "php": ">= 7.2.5"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Exist404\\DatatableCruds\\DatatableCrudsProvider"
+                    ],
+                    "aliases": {
+                        "Datatable": "Exist404\\DatatableCruds\\Facades\\DatatableCruds"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helper.php"
+                ],
+                "psr-4": {
+                    "Exist404\\DatatableCruds\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Osama Saad",
+                    "email": "osamasaad1237@gmail.com",
+                    "homepage": "https://github.com/404Exist/datatable-cruds",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel datatable cruds package",
+            "keywords": [
+                "Forms",
+                "JS",
+                "axios",
+                "cruds",
+                "datatable",
+                "datatable-cruds",
+                "laravel",
+                "vue"
+            ],
+            "support": {
+                "issues": "https://github.com/404Exist/laravel-datatable-cruds/issues",
+                "source": "https://github.com/404Exist/laravel-datatable-cruds/tree/v1.1.8"
+            },
+            "time": "2022-12-22T18:24:40+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -896,6 +962,90 @@
                 }
             ],
             "time": "2022-10-26T14:07:24+00:00"
+        },
+        {
+            "name": "intervention/image",
+            "version": "2.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Intervention/image.git",
+                "reference": "04be355f8d6734c826045d02a1079ad658322dad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/04be355f8d6734c826045d02a1079ad658322dad",
+                "reference": "04be355f8d6734c826045d02a1079ad658322dad",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "guzzlehttp/psr7": "~1.1 || ^2.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.2",
+                "phpunit/phpunit": "^4.8 || ^5.7 || ^7.5.15"
+            },
+            "suggest": {
+                "ext-gd": "to use GD library based image processing.",
+                "ext-imagick": "to use Imagick based image processing.",
+                "intervention/imagecache": "Caching extension for the Intervention Image library"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Intervention\\Image\\ImageServiceProvider"
+                    ],
+                    "aliases": {
+                        "Image": "Intervention\\Image\\Facades\\Image"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Intervention\\Image\\": "src/Intervention/Image"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Vogel",
+                    "email": "oliver@intervention.io",
+                    "homepage": "https://intervention.io/"
+                }
+            ],
+            "description": "Image handling and manipulation library with support for Laravel integration",
+            "homepage": "http://image.intervention.io/",
+            "keywords": [
+                "gd",
+                "image",
+                "imagick",
+                "laravel",
+                "thumbnail",
+                "watermark"
+            ],
+            "support": {
+                "issues": "https://github.com/Intervention/image/issues",
+                "source": "https://github.com/Intervention/image/tree/2.7.2"
+            },
+            "funding": [
+                {
+                    "url": "https://paypal.me/interventionio",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/Intervention",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-05-21T17:30:32+00:00"
         },
         {
             "name": "laravel/framework",

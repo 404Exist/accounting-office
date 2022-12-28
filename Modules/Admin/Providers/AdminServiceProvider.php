@@ -55,12 +55,60 @@ class AdminServiceProvider extends ServiceProvider
             module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower,
         );
         $this->mergeConfigFrom(
-            module_path($this->moduleName, 'Config/siteTexts.php'),
-            "{$this->moduleNameLower}.site_texts",
+            module_path($this->moduleName, 'Config/globalTexts.php'),
+            "{$this->moduleNameLower}.global_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/homeTexts.php'),
+            "{$this->moduleNameLower}.home_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/aboutUsTexts.php'),
+            "{$this->moduleNameLower}.about_us_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/fullAccountancyTexts.php'),
+            "{$this->moduleNameLower}.full_accountancy_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/kpirAccountingTexts.php'),
+            "{$this->moduleNameLower}.ledger_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/registerdLumpSumTexts.php'),
+            "{$this->moduleNameLower}.registerd_lump_sum_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/hrAndPayrollTexts.php'),
+            "{$this->moduleNameLower}.hr_and_payroll_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/taxConsultancyTexts.php'),
+            "{$this->moduleNameLower}.tax_consultancy_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/establishmentOfTheCompanyTexts.php'),
+            "{$this->moduleNameLower}.establishment_of_the_company_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/virtualOfficeTexts.php'),
+            "{$this->moduleNameLower}.virtual_office_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/freeWebsiteTexts.php'),
+            "{$this->moduleNameLower}.free_website_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/contactTexts.php'),
+            "{$this->moduleNameLower}.contact_texts",
         );
         $this->mergeConfigFrom(
             module_path($this->moduleName, 'Config/siteSettings.php'),
             "{$this->moduleNameLower}.site_settings",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/siteImages.php'),
+            "{$this->moduleNameLower}.site_images",
         );
     }
 

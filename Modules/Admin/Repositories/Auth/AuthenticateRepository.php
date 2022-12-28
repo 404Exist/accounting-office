@@ -6,7 +6,6 @@ use Illuminate\Contracts\Auth\Factory;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\PasswordBroker;
 use Illuminate\Contracts\Auth\StatefulGuard;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Support\Facades\Password;
 use Modules\Admin\Repositories\Interfaces\AuthenticateInterface;
 

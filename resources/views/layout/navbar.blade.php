@@ -15,26 +15,21 @@
             <ul class="navbar-nav my-2 my-lg-0">
                 <li class="nav-item">
                     <a class="nav-link fs-6 mx-3 active" href="{{ route('about_us') }}">{!! getText('the_nas') !!}</a>
-                    <div class="dropdown">
-                        <div>
-                            <a href="{{ route('find_out_more') }}">{!! getText('accounting_benefits') !!}</a>
-                        </div>
-                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-6 mx-3 active" href="{{ route('offer') }}">{!! getText('offer') !!}</a>
+                    <a class="nav-link fs-6 mx-3 active">{!! getText('offer') !!}</a>
                     <div class="dropdown">
                         <div>
                             <a href="{{ route('full_accountancy') }}">{!! getText('full_accountancy') !!}</a>
                         </div>
                         <div>
-                            <a href="{{ route('kpir_accounting') }}">{!! getText('kpir_accounting') !!}</a>
+                            <a href="{{ route('ledger') }}">{!! getText('ledger') !!}</a>
                         </div>
                         <div>
-                            <a href="{{ route('lump_sum_accounting') }}">{!! getText('lump_sum_accounting') !!}</a>
+                            <a href="{{ route('registerd_lump_sum') }}">{!! getText('registerd_lump_sum') !!}</a>
                         </div>
                         <div>
-                            <a href="{{ route('managing_hR_and_payroll') }}">{!! getText('managing_hR_and_payroll') !!}</a>
+                            <a href="{{ route('hr_and_payroll') }}">{!! getText('hr_and_payroll') !!}</a>
                         </div>
                         <div>
                             <a href="{{ route('tax_consultancy') }}">{!! getText('tax_consultancy') !!}</a>
@@ -58,17 +53,17 @@
                 <li class="nav-item">
                     <a class="nav-link fs-6 mx-3 active" href="{{ route('contact') }}">{!! getText('contact') !!}</a>
                 </li>
-                <li class="nav-item d-block d-md-none">
-                    <a class="nav-link fs-6 mx-3 active" href="{{ route('user_zone') }}">{!! getText('user_zone') !!}</a>
-                </li>
-                <li class="nav-item btn-container d-none d-md-block" data-aos="fade-up" data-aos-anchor-placement="top-center">
-                    <a class="nav-link fs-6 mx-3 active btn-child-1 bg-secondary-color" href="{{ route('user_zone') }}">
-                        {!! getText('user_zone') !!}
-                    </a>
-
-                    <a class="nav-link fs-6 mx-3 active btn-child-2 bg-primary-color" href="{{ route('user_zone') }}">
-                        {!! getText('user_zone') !!}
-                    </a>
+                <li class="nav-item">
+                    <a class="nav-link fs-6 mx-3 active">{{ LaravelLocalization::getCurrentLocaleNative() }}</a>
+                    <div class="dropdown" style="width: 100px">
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <div>
+                                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
                 </li>
             </ul>
         </div>

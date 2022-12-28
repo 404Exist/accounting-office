@@ -23,7 +23,7 @@
         @endif
         <div class="px-6 h-full text-gray-800 flex flex-row-reverse items-center justify-center">
             <div class="xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0 bg-white p-6">
-                <h1 class="mb-6 text-2xl text-center">Testvine Admin Module</h1>
+                <h1 class="mb-6 text-2xl text-center">{{ config('app.name') }} Admin Module</h1>
                 @yield('content')
             </div>
         </div>

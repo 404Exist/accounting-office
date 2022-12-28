@@ -20,6 +20,9 @@ $utilities: map-merge(
 @import 'bootstrap/scss/bootstrap';
 
 // global
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.8;
@@ -63,8 +66,22 @@ p {
 .bg-dark-white {
     background-color: $dark-white;
 }
+
 .bg-dark {
     color: $white;
+}
+
+.text-ucfirst {
+    text-transform: lowercase;
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}
+
+.hide-loader {
+    transition: all 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .overlay {
@@ -79,9 +96,10 @@ p {
             width: 13rem;
         }
     }
-    .nav-item:not(:last-child)  {
+    .nav-item  {
         position: relative;
         .nav-link {
+            cursor: pointer;
             &:hover {
                 border-bottom: 1px solid $secondary-color;
             }
@@ -265,10 +283,10 @@ section {
         margin-bottom: 6rem;
     }
     .tablet-img {
-        background-color: #F7F7F7;
         background-blend-mode: multiply;
         background-repeat: no-repeat;
         background-position: left;
+        background-size: contain;
     }
     a {
         &:hover {
