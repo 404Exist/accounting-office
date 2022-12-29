@@ -38,7 +38,7 @@ class AdminServiceProvider extends ServiceProvider
     {
         $this->app->register(RouteServiceProvider::class);
         $this->app->register(RepositoryServiceProvider::class);
-        $this->app->register(ShareSettingsProvider::class);
+        $this->app->register(AppConfigrationFromDBProvider::class);
     }
 
     /**
@@ -101,6 +101,14 @@ class AdminServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             module_path($this->moduleName, 'Config/contactTexts.php'),
             "{$this->moduleNameLower}.contact_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/privacyPolicyTexts.php'),
+            "{$this->moduleNameLower}.privacy_policy_texts",
+        );
+        $this->mergeConfigFrom(
+            module_path($this->moduleName, 'Config/offlineTexts.php'),
+            "{$this->moduleNameLower}.offline_texts",
         );
         $this->mergeConfigFrom(
             module_path($this->moduleName, 'Config/siteSettings.php'),

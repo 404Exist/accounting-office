@@ -2,7 +2,7 @@
     <div class="container">
         <div class="header row text-center">
             <a class="logo col-md-6 text-md-start mb-2" href="{{ route('home') }}">
-                <img src="{{ asset('assets/logo-white.svg') }}" />
+                <img src="{{ getPageImage(2, 'global') }}" />
             </a>
             <div class="col-md-6 text-md-end">
                 <a href="{{ getSetting('facebook') }}" class="mx-2">

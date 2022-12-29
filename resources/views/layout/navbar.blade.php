@@ -2,9 +2,9 @@
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">
             @if ($theme == "dark")
-            <img src="{{ asset('assets/logo-white.svg') }}" />
+            <img src="{{ getPageImage(2, 'global') }}" />
             @else
-            <img src="{{ asset('assets/logo-black.svg') }}" />
+            <img src="{{ getPageImage(3, 'global') }}" />
             @endif
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"

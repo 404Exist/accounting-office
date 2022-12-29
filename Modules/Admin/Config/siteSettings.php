@@ -6,6 +6,42 @@ return [
         'value' => "nazwa aplikacji"
     ],
     [
+        "key" => 'default_locale',
+        'value' => "pl"
+    ],
+    [
+        "key" => 'MAIL_HOST',
+        'value' => "smtp.mailtrap.io"
+    ],
+    [
+        "key" => 'MAIL_PORT',
+        'value' => "2525"
+    ],
+    [
+        "key" => 'MAIL_ENCRYPTION',
+        'value' => "tls"
+    ],
+    [
+        "key" => 'MAIL_USERNAME',
+        'value' => "23bff1901f59b1"
+    ],
+    [
+        "key" => 'MAIL_PASSWORD',
+        'value' => "06441faed657e2"
+    ],
+    [
+        "key" => 'MAIL_FROM_ADDRESS',
+        'value' => "hello@example.com"
+    ],
+    [
+        "key" => 'primary_color',
+        'value' => "#d99c5c",
+    ],
+    [
+        "key" => 'secondary_color',
+        'value' => "#ffea00",
+    ],
+    [
         "key" => 'facebook',
         'value' => "https://github.com/404Exist",
     ],

@@ -22,7 +22,7 @@ use Modules\Admin\Entities\Text;
 Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
     Route::get('/', fn() => view('index'))->name('home');
     Route::get('/o-nas', fn() => view('about_us'))->name('about_us');
-    Route::get('/polityka-prywatnosci', fn() => view('index'))->name('privacy_policy');
+    Route::get('/polityka-prywatnosci', fn() => view('privacy_policy'))->name('privacy_policy');
     Route::get('/pelna-ksiegowosc', fn() => view('full_accountancy'))->name('full_accountancy');
     Route::get('/ksiega-przychodow-i-rozchodow', fn() => view('ledger'))->name('ledger');
     Route::get('/ewidencja-ryczaltu', fn() => view('registerd_lump_sum'))->name('registerd_lump_sum');
@@ -38,5 +38,4 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
     // Route::get('/strefa-uzytkownika', fn() => view('user_zone'))->name('user_zone');
     // Route::get('/korzyści-księgowe', fn() => view('index'))->name('find_out_more');
     // Route::get('/oferta', fn() => view('index'))->name('offer');
-    // https://www.lemontax.pl/ewidencja-ryczaltu
 });

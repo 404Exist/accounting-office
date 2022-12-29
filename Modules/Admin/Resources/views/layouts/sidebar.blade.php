@@ -13,31 +13,40 @@
         </div>
         {{-- end sidebar toggle --}}
 
-        <p class="uppercase text-xs text-gray-600 mb-4 tracking-wider">homes</p>
+        {{-- <p class="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">tabels</p> --}}
 
         {{-- link --}}
-        <a href="{{ route('admin.dashboard') }}"
-            class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-            <i class="fad fa-chart-pie text-xs mr-2"></i>
-            Analytics dashboard
-        </a>
-        {{-- end link --}}
-
-        {{-- link --}}
-        <a href="{{ route('admin.ecommerce.dashboard') }}"
-            class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
-            <i class="fad fa-shopping-cart text-xs mr-2"></i>
-            ecommerce dashboard
-        </a>
-        {{-- end link --}}
-
-        <p class="uppercase text-xs text-gray-600 mb-4 mt-4 tracking-wider">tabels</p>
-
-        {{-- link --}}
-        <a href="{{ route('admin.users.index') }}"
+        <a href="{{ route('admin.profile.index') }}"
             class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
             <i class="fad fa-envelope-open-text text-xs mr-2"></i>
-            users
+            Admin Credentials
+        </a>
+        {{-- link --}}
+        {{-- link --}}
+        <a href="{{ route('admin.settings.index') }}"
+            class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+            <i class="fad fa-envelope-open-text text-xs mr-2"></i>
+            Site Settings
+        </a>
+        {{-- link --}}
+        <a href="{{ route('admin.team.members.index') }}"
+            class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+            <i class="fad fa-envelope-open-text text-xs mr-2"></i>
+            Team Members
+        </a>
+        {{-- end link --}}
+        {{-- link --}}
+        <a href="{{ route('admin.texts.index') }}"
+            class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+            <i class="fad fa-envelope-open-text text-xs mr-2"></i>
+            Site Texts
+        </a>
+        {{-- end link --}}
+        {{-- link --}}
+        <a href="{{ route('admin.images.index') }}"
+            class="mb-3 capitalize font-medium text-sm hover:text-teal-600 transition ease-in-out duration-500">
+            <i class="fad fa-envelope-open-text text-xs mr-2"></i>
+            Site Images
         </a>
         {{-- end link --}}
     </div>

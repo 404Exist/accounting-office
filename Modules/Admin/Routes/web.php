@@ -1,8 +1,12 @@
 <?php
 
-use Modules\Admin\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Route;
+use Modules\Admin\Http\Controllers\AdminsController;
 use Modules\Admin\Http\Controllers\AuthController;
-use Modules\Admin\Http\Controllers\UsersController;
+use Modules\Admin\Http\Controllers\PageImagesController;
+use Modules\Admin\Http\Controllers\SettingsController;
+use Modules\Admin\Http\Controllers\TeamMembersController;
+use Modules\Admin\Http\Controllers\TextsController;
 use Modules\Admin\Http\Middleware\Auth;
 use Modules\Admin\Http\Middleware\Guest;
 
@@ -17,9 +21,15 @@ Route::middleware(Guest::class)->group(function () {
 
 Route::middleware(Auth::class)->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-    Route::get('/', [AdminController::class, 'index'])->name('dashboard');
-    Route::view('/ecommerce-dashboard', 'admin::ecommerce-dashboard')->name('ecommerce.dashboard');
-    Route::apiResource('/users', UsersController::class);
-    Route::patch('/users/{id}/restore', [UsersController::class, 'restore'])->name('users.restore');
-    Route::get('/users/{user}/login', [UsersController::class, 'login'])->name('users.login');
+    Route::name('team')->apiResource('/members', TeamMembersController::class);
+    Route::get('/texts', [TextsController::class, 'index'])->name('texts.index');
+    Route::get('/texts/{text}', [TextsController::class, 'edit'])->name('texts.edit');
+    Route::patch('/texts/{text}', [TextsController::class, 'update'])->name('texts.update');
+    Route::get('/images', [PageImagesController::class, 'index'])->name('images.index');
+    Route::patch('/images/{text}', [PageImagesController::class, 'update'])->name('images.update');
+    Route::get('/settings', [SettingsController::class, 'index'])->name('settings.index');
+    Route::patch('/settings', [SettingsController::class, 'update'])->name('settings.update');
+    Route::get('/credentials', [AdminsController::class, 'index'])->name('profile.index');
+    Route::patch('/credentials', [AdminsController::class, 'update'])->name('profile.update');
+    Route::redirect('/', "/admin/settings")->name('dashboard');
 });

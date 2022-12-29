@@ -1,100 +1,116 @@
-@extends('layout.app', ["title" => getText("contact")])
+@extends('layout.app', ['title' => getText('contact')])
 
 @section('content')
-<div style="height: 10vw"></div>
-<section>
-    <div style="height: 60vh">
-        <img class="h-100 w-100" src="{{ getPageImage(1) }}" />
-    </div>
-</section>
-<section>
-    <div class="container">
-        <div class="mb-4 row">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-8">
-                <h2 class="text-ucfirst display-3 mb-5 fw-bold" data-aos="fade-down">{!! getText('write') !!} {!! getText('to_us') !!} !</h2>
-            </div>
+    <div style="height: 10vw"></div>
+    <section>
+        <div style="height: 60vh">
+            <img class="h-100 w-100" src="{{ getPageImage(1) }}" />
         </div>
-
-        <form action="{{ route('contact') }}#contact_us" method="POST" id="contact_us">
-            @csrf
-            @if (session()->has('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session()->get('success') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            @endif
-            <div class="mb-5 row">
-                <label for="name" class="col-sm-4 col-form-label text-ucfirst">{!! getText('your_name_and_surname_and_the_name_of_the_company') !!}</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control @error('name')is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">
-                    @error('name')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-            <div class="mb-5 row">
-                <label for="phone" class="col-sm-4 col-form-label text-ucfirst">{!! getText('phone_number') !!}</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control @error('phone')is-invalid @enderror" id="phone" name="phone" value="{{ old('phone') }}">
-                    @error('phone')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-            <div class="mb-5 row">
-                <label for="email" class="col-sm-4 col-form-label text-ucfirst">{!! getText('email_address') !!}</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control @error('email')is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
-                    @error('email')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-            <div class="mb-5 row">
-                <label for="subject" class="col-sm-4 col-form-label text-ucfirst">{!! getText('we_will_talk_about') !!}:</label>
-                <div class="col-sm-8">
-                    <select class="form-control text-capitalize @error('subject')is-invalid @enderror" name="subject" id="subject">
-                        <option value="">{!! getText('choose') !!}</option>
-                        <option @selected(old('subject') == "Usługach księgowych") value="Usługach księgowych">{!! getText('accounting_services') !!}</option>
-                        <option @selected(old('subject') == "Doradztwie podatkowym") value="Doradztwie podatkowym">{!! getText('tax_consultancy') !!}</option>
-                        <option @selected(old('subject') == "Pomocy w założeniu firmy") value="Pomocy w założeniu firmy">{!! getText('help_in_setting_up_a_business') !!}</option>
-                        <option @selected(old('subject') == "Usłudze Wirtualnego Biura") value="Usłudze Wirtualnego Biura">{!! getText('virtual') !!} {!! getText('office') !!}</option>
-                        <option @selected(old('subject') == "Rozliczeniu PIT") value="Rozliczeniu PIT">{!! getText('pit_settlement') !!}</option>
-                        <option @selected(old('subject') == "Współpracy") value="Współpracy">{!! getText('team_work') !!}</option>
-                        <option @selected(old('subject') == "Reklamacji") value="Reklamacji">{!! getText('complaints') !!}</option>
-                        <option @selected(old('subject') == "Innej sprawie") value="Innej sprawie">{!! getText('another_matter') !!}</option>
-                    </select>
-                    @error('subject')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-            <div class="mb-5 row">
-                <label for="message" class="col-sm-4 col-form-label text-ucfirst">{!! getText('a_few_more_words_from_you') !!}</label>
-                <div class="col-sm-8">
-                    <textarea class="form-control @error('message')is-invalid @enderror" id="message" name="message" style="min-height: 150px;">{{ old('message') }}</textarea>
-                    @error('message')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-            <div class="mb-5 row" data-aos="fade-up">
+    </section>
+    <section>
+        <div class="container">
+            <div class="mb-4 row">
                 <div class="col-sm-4"></div>
-                <div class="col-sm-8 d-flex">
-                    <button class="btn-container text-uppercase btn w-25" type="submit">
-                        <div class="p-3 btn-child-1 bg-secondary-color">{!! getText('send') !!}</div>
-
-                        <div class="p-3 btn-child-2 bg-primary-color">{!! getText('send') !!}</div>
-                    </button>
+                <div class="col-sm-8">
+                    <h2 class="text-ucfirst display-3 mb-5 fw-bold" data-aos="fade-down">{!! getText('write') !!}
+                        {!! getText('to_us') !!} !</h2>
                 </div>
             </div>
-        </form>
-    </div>
-</section>
-<section>
-    <div class="accounting-office features container-fluid">
-        {{-- <div class="description text-center container">
+
+            <form action="{{ route('contact') }}#contact_us" method="POST" id="contact_us">
+                @csrf
+                @if (session()->has('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ session()->get('success') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+                @if (session()->has('error'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{ session()->get('error') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+                <div class="mb-5 row">
+                    <label for="name" class="col-sm-4 col-form-label text-ucfirst">{!! getText('your_name_and_surname_and_the_name_of_the_company') !!}</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control @error('name')is-invalid @enderror" id="name"
+                            name="name" value="{{ old('name') }}">
+                        @error('name')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="mb-5 row">
+                    <label for="phone" class="col-sm-4 col-form-label text-ucfirst">{!! getText('phone_number') !!}</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control @error('phone')is-invalid @enderror" id="phone"
+                            name="phone" value="{{ old('phone') }}">
+                        @error('phone')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="mb-5 row">
+                    <label for="email" class="col-sm-4 col-form-label text-ucfirst">{!! getText('email_address') !!}</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control @error('email')is-invalid @enderror" id="email"
+                            name="email" value="{{ old('email') }}">
+                        @error('email')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="mb-5 row">
+                    <label for="subject" class="col-sm-4 col-form-label text-ucfirst">{!! getText('we_will_talk_about') !!}:</label>
+                    <div class="col-sm-8">
+                        <select class="form-control text-capitalize @error('subject')is-invalid @enderror" name="subject"
+                            id="subject">
+                            <option value="">{!! getText('choose') !!}</option>
+                            <option @selected(old('subject') == 'Usługach księgowych') value="Usługach księgowych">{!! getText('accounting_services') !!}
+                            </option>
+                            <option @selected(old('subject') == 'Doradztwie podatkowym') value="Doradztwie podatkowym">{!! getText('tax_consultancy') !!}
+                            </option>
+                            <option @selected(old('subject') == 'Pomocy w założeniu firmy') value="Pomocy w założeniu firmy">{!! getText('help_in_setting_up_a_business') !!}
+                            </option>
+                            <option @selected(old('subject') == 'Usłudze Wirtualnego Biura') value="Usłudze Wirtualnego Biura">{!! getText('virtual') !!}
+                                {!! getText('office') !!}</option>
+                            <option @selected(old('subject') == 'Rozliczeniu PIT') value="Rozliczeniu PIT">{!! getText('pit_settlement') !!}</option>
+                            <option @selected(old('subject') == 'Współpracy') value="Współpracy">{!! getText('team_work') !!}</option>
+                            <option @selected(old('subject') == 'Reklamacji') value="Reklamacji">{!! getText('complaints') !!}</option>
+                            <option @selected(old('subject') == 'Innej sprawie') value="Innej sprawie">{!! getText('another_matter') !!}</option>
+                        </select>
+                        @error('subject')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="mb-5 row">
+                    <label for="message" class="col-sm-4 col-form-label text-ucfirst">{!! getText('a_few_more_words_from_you') !!}</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control @error('message')is-invalid @enderror" id="message" name="message"
+                            style="min-height: 150px;">{{ old('message') }}</textarea>
+                        @error('message')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="mb-5 row" data-aos="fade-up">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-8 d-flex">
+                        <button class="btn-container text-uppercase btn w-25" type="submit">
+                            <div class="p-3 btn-child-1 bg-primary-color">{!! getText('send') !!}</div>
+
+                            <div class="p-3 btn-child-2 bg-secondary-color">{!! getText('send') !!}</div>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="accounting-office features container-fluid">
+            {{-- <div class="description text-center container">
             <h1 class="display-2 mb-4" data-aos="fade-down">{!! getText('contact_us') !!} !</h1>
             <hr class="opacity-100 my-4 mx-auto w-25" />
 
@@ -141,28 +157,30 @@
                 </div>
             </div>
         </div> --}}
-        <div class="row bg-dark-white">
-            <div class="col-md-6 mt-5 p-5" data-aos="zoom-in">
-                <div class="row">
-                    <div class="col-6">
-                        <h5 class="text-capitalize fw-bold">{{ getSetting('app_name') }}</h5>
-                        <p>{!! getText('main_customer_service_office') !!}</p>
-                        <p>{{ getSetting('customer_service') }}</p>
-                    </div>
-                    <div class="col-6">
-                        <h6 class="text-capitalize fw-bold">{!! getText('address') !!}</h6>
-                        <p>{{ getSetting('address') }}</p>
-                        <h6 class="text-capitalize fw-bold">{!! getText('mail') !!}</h6>
-                        <p>{{ getSetting('mail') }}</p>
-                        <h6 class="text-capitalize fw-bold">{!! getText('telephone') !!}</h6>
-                        <p>{{ getSetting('tel') }}</p>
+            <div class="row bg-dark-white">
+                <div class="col-md-6 mt-5 p-5" data-aos="zoom-in">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5 class="text-capitalize fw-bold">{{ getSetting('app_name') }}</h5>
+                            <p>{!! getText('main_customer_service_office') !!}</p>
+                            <p>{{ getSetting('customer_service') }}</p>
+                        </div>
+                        <div class="col-6">
+                            <h6 class="text-capitalize fw-bold">{!! getText('address') !!}</h6>
+                            <p>{{ getSetting('address') }}</p>
+                            <h6 class="text-capitalize fw-bold">{!! getText('mail') !!}</h6>
+                            <p>{{ getSetting('mail') }}</p>
+                            <h6 class="text-capitalize fw-bold">{!! getText('telephone') !!}</h6>
+                            <p>{{ getSetting('tel') }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6" data-aos="fade-right">
-                <iframe class="w-100 h-100" title="Location" src="{{ getSetting('google_map_embed_link') }}" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0"></iframe>
+                <div class="col-md-6" data-aos="fade-right">
+                    <iframe class="w-100 h-100" title="Location" src="{{ getSetting('google_map_embed_link') }}"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        frameborder="0"></iframe>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 @endsection

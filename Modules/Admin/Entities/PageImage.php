@@ -12,6 +12,8 @@ class PageImage extends Model
     use ForgetCache;
     use HasFactory;
 
+    protected $appends = ["url"];
+
     protected $fillable = [
         'name',
         'page_name',

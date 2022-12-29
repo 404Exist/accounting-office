@@ -148,4 +148,11 @@ return [
             "pl" => "Otrzymaliśmy Twój e-mail, wkrótce się z Tobą skontaktujemy!",
         ])
     ],
+    [
+        "key" => "contact_email_not_sent",
+        "value" => json_encode([
+            "en" => "Something went wrong, please try again later!",
+            "pl" => "Coś poszło nie tak. Proszę spróbować później!",
+        ])
+    ],
 ];

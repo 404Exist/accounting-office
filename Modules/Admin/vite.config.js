@@ -16,6 +16,7 @@ export default defineConfig({
             buildDirectory: 'build-admin',
             input: [
                 __dirname + '/Resources/assets/css/app.css',
+                __dirname + '/Resources/assets/js/app.js',
             ],
             refresh: true,
         }),

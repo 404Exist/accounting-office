@@ -18,10 +18,10 @@ class TeamMember extends Model
         'order',
     ];
 
-    public function pictureUrl(): Attribute
+    public function picture(): Attribute
     {
-        return Attribute::get(function () {
-            return asset("storage/admin/team/{$this->picture}");
+        return Attribute::get(function (string $value) {
+            return asset("storage/admin/team/members/{$value}");
         });
     }
 }

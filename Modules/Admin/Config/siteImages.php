@@ -1,6 +1,9 @@
 <?php
 
 return [
+    ["name" => 'logo.ico', 'page_name' => "global", "order" => 1],
+    ["name" => 'logo-white.webp', 'page_name' => "global", "order" => 2],
+    ["name" => 'logo-black.webp', 'page_name' => "global", "order" => 3],
     ["name" => 'zadowolony-klient-LemonTax-fin.webp', 'page_name' => "home", "order" => 1],
     ["name" => 'accountant-section-bg.webp', 'page_name' => "home", "order" => 2],
     ["name" => 'kpir-lemontax.webp', 'page_name' => "home", "order" => 3],

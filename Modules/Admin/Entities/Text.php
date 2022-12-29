@@ -14,6 +14,10 @@ class Text extends Model
     protected $fillable = [
         'key',
         'value',
-        'page',
+        'page_name',
+    ];
+
+    protected $casts = [
+        'value' => 'json',
     ];
 }

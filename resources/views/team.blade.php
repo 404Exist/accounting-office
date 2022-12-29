@@ -13,11 +13,13 @@
 </section>
 <section>
     <div class="container">
-        <div class="row">
+        <div class="row gy-5 justify-content-center">
             @foreach (app('team_members') as $member)
                 <div class="col-md-3" data-aos="zoom-in">
                     <div class="bg-dark-white rounded">
-                        <img src="{{ $member->pictureUrl }}" class="img-fluid" alt="{{ $member->name }}">
+                        <div style="height: 350px">
+                            <img src="{{ $member->picture }}" class="w-100 h-100" alt="{{ $member->name }}">
+                        </div>
                         <div class="text-center py-3">{{ $member->name }}</div>
                     </div>
                 </div>
