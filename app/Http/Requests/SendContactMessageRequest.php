@@ -36,11 +36,11 @@ class SendContactMessageRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => getText('field_is_required'),
-            'string' => getText('field_must_be_string'),
-            'max' => getText('field_max'),
-            'in' => getText('selected_field_is_invaild'),
-            'email' => getText('field_must_be_email'),
+            'required' => getKeyText('field_is_required'),
+            'string' => getKeyText('field_must_be_string'),
+            'max' => getKeyText('field_max'),
+            'in' => getKeyText('selected_field_is_invaild'),
+            'email' => getKeyText('field_must_be_email'),
         ];
     }
 }

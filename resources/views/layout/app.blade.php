@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<html
-    lang="{{ str_replace('_', '-', app()->getLocale()) }}"
-    dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}"
-    style="--primary-color: {{ getSetting('primary_color') }};--secondary-color: {{ getSetting('secondary_color') }}"
->
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}"
+    style="--primary-color: {{ getKeySetting('primary_color') }};--secondary-color: {{ getKeySetting('secondary_color') }}">
 
 <head>
     <meta charset="utf-8">
@@ -18,7 +15,7 @@
     <meta property="og:image:height" content="1277">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pl_PL">
-    <title>{{ $title }} - {{ getSetting('app_name') }}</title>
+    <title>{{ $title }} - {{ getKeySetting('app_name') }}</title>
     <meta name="description"
         content="Nowoczesne biuro rachunkowe w Gdańsku. Łączymy zalety tradycyjnego biura rachunkowego z narzędziami online XXI wieku. Odkryj nową jakość księgowości w Gdańsku!">
     <link rel="shortcut icon" type="image/x-icon" href="{{ getPageImage(1, 'global') }}">

@@ -16,7 +16,7 @@ class SettingsController extends Controller
     public function update(Request $request)
     {
         foreach ($request->except('_token', '_method') as $key => $value) {
-            if ($value && $value != getSetting($key)) {
+            if ($value && $value != getKeySetting($key)) {
                 Setting::where('key', $key)->first()?->update(['value' => $value]);
             }
         }

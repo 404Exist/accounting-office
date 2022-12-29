@@ -10,18 +10,18 @@ if (!function_exists('admin')) {
     }
 }
 
-if (!function_exists('getSetting')) {
-    function getSetting(string $key, string $dafault = null)
+if (!function_exists('getKeySetting')) {
+    function getKeySetting(string $key, string $dafault = null)
     {
         return app('site_settings')?->get($key) ?? $dafault;
     }
 }
 
-if (!function_exists('getText')) {
-    function getText(string $key)
+if (!function_exists('getKeyText')) {
+    function getKeyText(string $key)
     {
         return app('site_texts')?->get($key)[app()->getLocale()]
-        ?? str($key)->headline();
+            ?? str($key)->headline();
     }
 }
 

@@ -1,4 +1,4 @@
-@extends('layout.app', ['theme' => 'dark', 'title' => getText('home')])
+@extends('layout.app', ['theme' => 'dark', 'title' => getKeyText('home')])
 
 @section('content')
     {{-- INTRO STARTS HERE --}}
@@ -6,41 +6,41 @@
         <div class="overlay position-absolute top-0 bottom-0 start-0 end-0"></div>
         <div class="container text-center d-flex h-100 justify-content-center align-items-center flex-column content">
             <h1 class="mt-md-4 z-1 text-uppercase">
-                {!! getText('accounting') !!}
-                <span class="text-secondary-color fw-light">{!! getText('again') !!}</span>
+                {!! getKeyText('accounting') !!}
+                <span class="text-secondary-color fw-light">{!! getKeyText('again') !!}</span>
             </h1>
             <div class="row buttons-container text-uppercase fs-2 z-1">
                 <a href="{{ route('full_accountancy') }}" class="col-md-4 btn-container">
                     <div class="p-2 btn-child-1">
-                        <div>{!! getText('i_am_looking_for_a_service') !!}</div>
-                        <div class="fw-bold">{!! getText('accountant') !!}</div>
+                        <div>{!! getKeyText('i_am_looking_for_a_service') !!}</div>
+                        <div class="fw-bold">{!! getKeyText('accountant') !!}</div>
                     </div>
 
                     <div class="p-2 btn-child-2 bg-secondary-color">
-                        <div>{!! getText('check') !!}</div>
-                        <div>{!! getText('our_offer') !!}</div>
+                        <div>{!! getKeyText('check') !!}</div>
+                        <div>{!! getKeyText('our_offer') !!}</div>
                     </div>
                 </a>
                 <a href="{{ route('establishment_of_the_company') }}" class="col-md-4 btn-container">
                     <div class="p-2 btn-child-1">
-                        <div>{!! getText('i_want_to_put') !!}</div>
-                        <div class="fw-bold">{!! getText('company') !!}</div>
+                        <div>{!! getKeyText('i_want_to_put') !!}</div>
+                        <div class="fw-bold">{!! getKeyText('company') !!}</div>
                     </div>
 
                     <div class="p-2 btn-child-2 bg-secondary-color">
-                        <div>{!! getText('great') !!}</div>
-                        <div>{!! getText('we_help_you') !!}!</div>
+                        <div>{!! getKeyText('great') !!}</div>
+                        <div>{!! getKeyText('we_help_you') !!}!</div>
                     </div>
                 </a>
                 <a href="{{ route('tax_consultancy') }}" class="col-md-4 btn-container">
                     <div class="p-2 btn-child-1">
-                        <div>{!! getText('i_am_looking_for_an_advisor') !!}</div>
-                        <div class="fw-bold">{!! getText('tax') !!}</div>
+                        <div>{!! getKeyText('i_am_looking_for_an_advisor') !!}</div>
+                        <div class="fw-bold">{!! getKeyText('tax') !!}</div>
                     </div>
 
                     <div class="p-2 btn-child-2 bg-secondary-color">
-                        <div>{!! getText('our_advisors') !!}</div>
-                        <div>{!! getText('they are waiting for you') !!}!</div>
+                        <div>{!! getKeyText('our_advisors') !!}</div>
+                        <div>{!! getKeyText('they are waiting for you') !!}!</div>
                     </div>
                 </a>
             </div>
@@ -52,17 +52,17 @@
         <div class="home-first-section">
             <div class="container text-center w-75">
                 <h1 class="display-2" data-aos="fade-down">
-                    <span class="fw-bold">{!! getText('an_accounting_office') !!}</span>
+                    <span class="fw-bold">{!! getKeyText('an_accounting_office') !!}</span>
 
-                    <span class="fw-light">{!! getText('no_1') !!} {!! getText('in') !!} {!! getText('gdańsk') !!}</span>
+                    <span class="fw-light">{!! getKeyText('no_1') !!} {!! getKeyText('in') !!} {!! getKeyText('gdańsk') !!}</span>
                 </h1>
                 <hr />
-                <div class="mb-5" data-aos="zoom-in">{!! getText('accounting_office_home_text_1') !!}</div>
+                <div class="mb-5" data-aos="zoom-in">{!! getKeyText('accounting_office_home_text_1') !!}</div>
                 <div class="d-flex justify-content-center aos-init aos-animate" data-aos="fade-up">
                     <a href="{{ route('about_us') }}" class="btn-container text-uppercase">
-                        <div class="p-3 btn-child-1 bg-primary-color">{!! getText('more_about_us') !!}</div>
+                        <div class="p-3 btn-child-1 bg-primary-color">{!! getKeyText('more_about_us') !!}</div>
 
-                        <div class="p-3 btn-child-2 bg-secondary-color">{!! getText('get_to_know_us_better') !!}</div>
+                        <div class="p-3 btn-child-2 bg-secondary-color">{!! getKeyText('get_to_know_us_better') !!}</div>
                     </a>
                 </div>
             </div>
@@ -72,10 +72,10 @@
                         <div class="col-md-6 pt-5">
                             <div class="w-md-75">
                                 <h4 data-aos="fade-down">
-                                    {!! getText('are_you_looking_for_an_accountant') !!}?
+                                    {!! getKeyText('are_you_looking_for_an_accountant') !!}?
                                 </h4>
                                 <div data-aos="zoom-out">
-                                    {!! getText('looking_for_an_accountant_home_text') !!}
+                                    {!! getKeyText('looking_for_an_accountant_home_text') !!}
                                 </div>
                             </div>
                             <div class="bg-image" data-aos="fade-right"
@@ -83,9 +83,9 @@
                                 <div class="overlay position-absolute top-0 bottom-0 start-0 end-0"></div>
                                 <div class="z-1 d-flex justify-content-center" data-aos="fade-up">
                                     <a href="{{ route('ledger') }}" class="btn-container text-uppercase">
-                                        <div class="p-3 btn-child-left-1">{!! getText('find_out_more') !!}</div>
+                                        <div class="p-3 btn-child-left-1">{!! getKeyText('find_out_more') !!}</div>
 
-                                        <div class="p-3 btn-child-left-2 bg-secondary-color">{!! getText('get_to_know_us_better') !!}</div>
+                                        <div class="p-3 btn-child-left-2 bg-secondary-color">{!! getKeyText('get_to_know_us_better') !!}</div>
                                     </a>
                                 </div>
                             </div>
@@ -95,18 +95,18 @@
                                 <div class="overlay position-absolute top-0 bottom-0 start-0 end-0"></div>
                                 <div class="z-1 d-flex justify-content-center" data-aos="fade-up">
                                     <a href="{{ route('full_accountancy') }}" class="btn-container text-uppercase">
-                                        <div class="p-3 btn-child-right-1">{!! getText('find_out_more') !!}</div>
+                                        <div class="p-3 btn-child-right-1">{!! getKeyText('find_out_more') !!}</div>
 
-                                        <div class="p-3 btn-child-right-2 bg-secondary-color">{!! getText('get_to_know_us_better') !!}</div>
+                                        <div class="p-3 btn-child-right-2 bg-secondary-color">{!! getKeyText('get_to_know_us_better') !!}</div>
                                     </a>
                                 </div>
                             </div>
                             <div class="bg-dark" data-aos="fade-left" style="min-height: 230px">
                                 <div class="z-1 d-flex justify-content-center" data-aos="fade-up">
                                     <a href="{{ route('tax_consultancy') }}" class="btn-container text-uppercase">
-                                        <div class="p-3 btn-child-right-1">{!! getText('find_out_more') !!}</div>
+                                        <div class="p-3 btn-child-right-1">{!! getKeyText('find_out_more') !!}</div>
 
-                                        <div class="p-3 btn-child-right-2 bg-secondary-color">{!! getText('get_to_know_us_better') !!}</div>
+                                        <div class="p-3 btn-child-right-2 bg-secondary-color">{!! getKeyText('get_to_know_us_better') !!}</div>
                                     </a>
                                 </div>
                             </div>
@@ -115,9 +115,9 @@
                             <div class="bg-image bg-primary-color" data-aos="fade-right">
                                 <div class="z-1 d-flex justify-content-center" data-aos="fade-up">
                                     <a href="{{ route('hr_and_payroll') }}" class="btn-container text-uppercase">
-                                        <div class="p-3 btn-child-left-1">{!! getText('hr_and_payroll') !!}</div>
+                                        <div class="p-3 btn-child-left-1">{!! getKeyText('hr_and_payroll') !!}</div>
 
-                                        <div class="p-3 btn-child-left-2 bg-secondary-color">{!! getText('find_out_more') !!}</div>
+                                        <div class="p-3 btn-child-left-2 bg-secondary-color">{!! getKeyText('find_out_more') !!}</div>
                                     </a>
                                 </div>
                             </div>
@@ -129,11 +129,11 @@
                                 <div class="z-1 d-flex justify-content-center" data-aos="fade-up">
                                     <a href="{{ route('establishment_of_the_company') }}"
                                         class="btn-container text-uppercase">
-                                        <div class="p-3 btn-child-1">{!! getText('setting_up_a_company') !!}</div>
+                                        <div class="p-3 btn-child-1">{!! getKeyText('setting_up_a_company') !!}</div>
 
                                         <div class="p-3 btn-child-2 bg-secondary-color">
-                                            <p>{!! getText('setting_up_a_company') !!}</p>
-                                            <p>{!! getText('read_more') !!}</p>
+                                            <p>{!! getKeyText('setting_up_a_company') !!}</p>
+                                            <p>{!! getKeyText('read_more') !!}</p>
                                         </div>
                                     </a>
                                 </div>
@@ -149,9 +149,9 @@
     <section>
         <div class="features container text-center">
             <h1 class="display-2" data-aos="fade-down">
-                <span class="fw-bold">{!! getText('a_new_quality') !!}</span>
+                <span class="fw-bold">{!! getKeyText('a_new_quality') !!}</span>
 
-                <span class="fw-light">{!! getText('in') !!} {!! getText('accounting') !!}</span>
+                <span class="fw-light">{!! getKeyText('in') !!} {!! getKeyText('accounting') !!}</span>
             </h1>
             <div class="row justify-content-center g-5 my-4">
                 <div class="col-md-2 col-6" data-aos="zoom-in">
@@ -166,9 +166,9 @@
                                 d="M370.6,430.5c9.1,2.6,17.6,7.1,24.8,13.3c2.6,2.1,6.5,1.7,8.6-1c2-2.5,1.7-6.2-0.7-8.3 c-8.7-7.6-19-13-30.1-15.9l-3.7-1c-5.8-1.4-11.9,0.5-15.9,4.9c-13.7,15.9-31,16.7-49.3,16.7s-35.3-1.3-49-16.7 c-3.9-4.5-10.1-6.4-15.9-4.9l-3.7,1c-25.7,7-45.8,26.8-53.2,52.4l-5.2,17.9h-52.4c-0.8,0-1.6-0.3-2.1-1c-0.6-0.7-0.8-1.6-0.6-2.5 l10.2-36.3c8.7-28.8,27-38.1,59.8-45.9c0.6,0,1,0,1.6-0.6c2.1,1.5,4.7,3.1,6.8,4.4c0.8,0.5,1.8,0.7,2.8,0.6 c2.3-0.1,4.4-1.4,5.6-3.4c1.4-3,0.3-6.6-2.5-8.3c-18.3-9.3-31.7-36.3-31.7-63.5c-0.1-24.9,20-45.2,44.9-45.2c0.1,0,0.2,0,0.3,0 c7.3,0.1,14.5,1.8,21,5.2c-3.8,8.9-5.8,18.5-5.9,28.2c0,52.9,31.7,97.6,70,97.6s70-45.6,70-97.6c0-38.7-31.4-70.1-70.1-70.1 c-23.3,0-45.1,11.6-58.2,31l0,0c-28.2-14.7-63-3.8-77.7,24.4c-4.3,8.2-6.5,17.4-6.5,26.7c-0.2,21.9,7.1,43.3,20.8,60.4 c-28.2,7.1-51.7,17.7-62.5,53l-10.4,36c-2.1,8.2,2.9,16.6,11.1,18.7c1.1,0.3,2.3,0.4,3.4,0.5h48.3l-4.4,14.5 c-1.6,5.2-0.6,10.9,2.8,15.2c3.4,4.4,8.7,7.1,14.3,7.1h131.6c3.4,0,6.2-2.8,6.2-6.2s-2.8-6.2-6.2-6.2H186c-2.8,0-5-2.3-4.9-5.1 c0-0.5,0.1-1,0.2-1.4l13-45.2c6.3-21.4,23.3-38,44.9-43.7l3.7-1c1.3-0.2,2.6,0.3,3.4,1.3c17.1,19.5,38.1,21,58.6,21 c20.5,0,41.5-1.6,58.6-21l0,0c0.8-0.8,2-1.1,3.1-1L370.6,430.5z M305.2,262.9c25.1,0.1,47.2,16.3,54.8,40.2 c-11.1,2.2-22.5-2.3-29.1-11.4c-1.9-2.7-5.7-3.4-8.4-1.5c-0.1,0.1-0.2,0.1-0.2,0.2c-1.1,0.7-1.8,1.8-2.1,3.1c0,0,0,0.6-0.6,1 c-8.7,17.6-37.8,25.1-71.4,18.6c3.8-28.6,28.1-50,57-50.2H305.2z M271.4,327.7c24.8,0,45.2-7.9,55.6-22.3 c7.6,6.8,17.4,10.5,27.5,10.6c2.7,0,5.3-0.3,7.9-1c0.2,1.7,0.2,3.5,0,5.2c0,45.6-27,85.5-57.6,85.5c-29.4,0-55.6-36.9-57.6-80.2 c7.9,1.4,15.8,2.2,23.8,2.1L271.4,327.7z" />
                         </g>
                     </svg>
-                    <strong>{!! getText('individual') !!}</strong>
+                    <strong>{!! getKeyText('individual') !!}</strong>
                     <p>
-                        <small class="text-muted">{!! getText('accounting_services') !!}</small>
+                        <small class="text-muted">{!! getKeyText('accounting_services') !!}</small>
                     </p>
                 </div>
                 <div class="col-md-2 col-6" data-aos="zoom-in">
@@ -183,10 +183,10 @@
                         <path fill="#FFFFFF"
                             d="M297.6,288.9c-25.9,0-50.6,11.4-67.5,31c-2.1,2.6-1.8,6.4,0.6,8.6c1.1,0.9,2.5,1.5,4,1.5 c1.8,0.1,3.5-0.7,4.6-2.1c14.7-16.9,35.9-26.7,58.3-26.7c5.6,0,11.1,0.6,16.6,1.8c3.3,0.6,6.5-1.4,7.4-4.6c0.6-3.3-1.4-6.5-4.6-7.4 C310.7,289.5,304.2,288.7,297.6,288.9L297.6,288.9z" />
                     </svg>
-                    <strong>{!! getText('fast_contact') !!}</strong>
+                    <strong>{!! getKeyText('fast_contact') !!}</strong>
                     <p>
-                        <small class="text-muted">{!! getText('personal') !!}, {!! getText('telephone') !!},
-                            {!! getText('mail') !!}</small>
+                        <small class="text-muted">{!! getKeyText('personal') !!}, {!! getKeyText('telephone') !!},
+                            {!! getKeyText('mail') !!}</small>
                     </p>
                 </div>
                 <div class="col-md-2 col-6" data-aos="zoom-in">
@@ -207,9 +207,9 @@
                             font-size="63.4961px">4h</text>
                     </svg>
 
-                    <strong>{!! getText('access_to_accounting') !!}</strong>
+                    <strong>{!! getKeyText('access_to_accounting') !!}</strong>
                     <p>
-                        <small class="text-muted">{!! getText('data_online_24h') !!}</small>
+                        <small class="text-muted">{!! getKeyText('data_online_24h') !!}</small>
                     </p>
                 </div>
                 <div class="col-md-2 col-6" data-aos="zoom-in">
@@ -255,9 +255,9 @@
                             d="M314.5,476.1c-8.2,0-14.9,6.7-14.9,14.9c0,8.2,6.7,14.9,14.9,14.9c8.2,0,14.9-6.7,14.9-14.9 C329.4,482.8,322.8,476.2,314.5,476.1z M314.5,501c-5.5,0-9.9-4.4-9.9-9.9s4.4-9.9,9.9-9.9s9.9,4.4,9.9,9.9 C324.4,496.6,320,501,314.5,501z" />
                     </svg>
 
-                    <strong>{!! getText('document_flow') !!}</strong>
+                    <strong>{!! getKeyText('document_flow') !!}</strong>
                     <p>
-                        <small class="text-muted">{!! getText('online') !!}</small>
+                        <small class="text-muted">{!! getKeyText('online') !!}</small>
                     </p>
                 </div>
             </div>
@@ -275,9 +275,9 @@
                         </g>
                     </svg>
 
-                    <strong>{!! getText('representation') !!}</strong>
+                    <strong>{!! getKeyText('representation') !!}</strong>
                     <p>
-                        <small class="text-muted">{!! getText('in_front_of_offices') !!}</small>
+                        <small class="text-muted">{!! getKeyText('in_front_of_offices') !!}</small>
                     </p>
                 </div>
                 <div class="col-md-2 col-6" data-aos="zoom-in">
@@ -299,9 +299,9 @@
                             d="M349.2,409H233.7c-3.4,0.4-5.8,3.4-5.4,6.8c0.3,2.8,2.6,5.1,5.4,5.4h115.5c3.4-0.4,5.8-3.4,5.4-6.8 C354.3,411.6,352.1,409.4,349.2,409z" />
                     </svg>
 
-                    <strong>{!! getText('collection_of_documents') !!}</strong>
+                    <strong>{!! getKeyText('collection_of_documents') !!}</strong>
                     <p>
-                        <small class="text-muted">{!! getText('from_customer') !!}</small>
+                        <small class="text-muted">{!! getKeyText('from_customer') !!}</small>
                     </p>
                 </div>
                 <div class="col-md-2 col-6" data-aos="zoom-in">
@@ -317,9 +317,9 @@
                             d="M399.7,395.2h-9.6c-3.5,0.4-6.1,3.6-5.7,7.1c0.3,3,2.7,5.3,5.7,5.7h9.6c3.5-0.4,6.1-3.6,5.7-7.1 C405.1,397.9,402.7,395.6,399.7,395.2z" />
                     </svg>
 
-                    <strong>{!! getText('program') !!}</strong>
+                    <strong>{!! getKeyText('program') !!}</strong>
                     <p>
-                        <small class="text-muted">{!! getText('lemon_benefit') !!}</small>
+                        <small class="text-muted">{!! getKeyText('lemon_benefit') !!}</small>
                     </p>
                 </div>
                 <div class="col-md-2 col-6" data-aos="zoom-in">
@@ -340,17 +340,17 @@
                         <path fill="#FFFFFF"
                             d="M306.7,365.8c0.7,2.8,3.2,4.7,6,4.8c0.5,0.2,1.1,0.2,1.6,0c3.4-0.9,5.4-4.4,4.5-7.8c0-0.1,0-0.1,0-0.2l-7-25  c-3-10.7-1.5-22.2,4.1-31.7c1.9-2.9,1.1-6.8-1.8-8.7s-6.8-1.1-8.7,1.8c-0.1,0.2-0.2,0.4-0.3,0.6c-7.6,12.7-9.5,27.9-5.4,42.1 L306.7,365.8z" />
                     </svg>
-                    <strong>{!! getText('the_best') !!}</strong>
+                    <strong>{!! getKeyText('the_best') !!}</strong>
                     <p>
-                        <small class="text-muted">{!! getText('coffee') !!} :)</small>
+                        <small class="text-muted">{!! getKeyText('coffee') !!} :)</small>
                     </p>
                 </div>
             </div>
             <div class="d-flex justify-content-center" data-aos="fade-up">
                 <a href="{{ route('about_us') }}" class="btn-container text-uppercase">
-                    <div class="p-3 btn-child-1 bg-primary-color">{!! getText('find_out_more') !!}</div>
+                    <div class="p-3 btn-child-1 bg-primary-color">{!! getKeyText('find_out_more') !!}</div>
 
-                    <div class="p-3 btn-child-2 bg-secondary-color">{!! getText('get_to_know_us_better') !!}</div>
+                    <div class="p-3 btn-child-2 bg-secondary-color">{!! getKeyText('get_to_know_us_better') !!}</div>
                 </a>
             </div>
         </div>
@@ -361,11 +361,11 @@
         <div class="accounting-office container">
             <div class="description text-center">
                 <h1 class="display-2 mb-4" data-aos="fade-down">
-                    <span class="fw-bold">{!! getText('more_than') !!}</span>
+                    <span class="fw-bold">{!! getKeyText('more_than') !!}</span>
 
-                    <span class="fw-light">{!! getText('an_accounting_office') !!}</span>
+                    <span class="fw-light">{!! getKeyText('an_accounting_office') !!}</span>
                 </h1>
-                <div data-aos="zoom-in">{!! getText('accounting_office_home_text_2') !!}</div>
+                <div data-aos="zoom-in">{!! getKeyText('accounting_office_home_text_2') !!}</div>
             </div>
             <div class="row">
                 <div class="col-md-6 tablet-img bg-dark-white" data-aos="fade-right"
@@ -373,14 +373,14 @@
                 </div>
                 <div class="col-md-6 py-5">
                     <h2 class="display-2 mb-4" data-aos="fade-down">
-                        <span class="fw-bold">{!! getText('free') !!}</span>
+                        <span class="fw-bold">{!! getKeyText('free') !!}</span>
                         <br />
-                        <span class="fw-light">{!! getText('website') !!}!</span>
+                        <span class="fw-light">{!! getKeyText('website') !!}!</span>
                     </h2>
-                    <div data-aos="zoom-out">{!! getText('free_website_home_text') !!}</div>
+                    <div data-aos="zoom-out">{!! getKeyText('free_website_home_text') !!}</div>
                     <div class="text-end">
                         <a href="{{ route('free_website') }}" class="fw-bold">
-                            {!! getText('read_more') !!}
+                            {!! getKeyText('read_more') !!}
                         </a>
                     </div>
                 </div>
@@ -396,14 +396,14 @@
                 <div class="col-md-5">
                     <div class="overlay">
                         <h2 class="display-2 mb-4" data-aos="fade-down">
-                            <span class="fw-bold">{!! getText('virtual') !!}</span>
+                            <span class="fw-bold">{!! getKeyText('virtual') !!}</span>
                             <br />
-                            <span class="fw-light">{!! getText('office') !!}!</span>
+                            <span class="fw-light">{!! getKeyText('office') !!}!</span>
                         </h2>
-                        <div data-aos="zoom-in">{!! getText('virtual_office_home_text') !!}</div>
+                        <div data-aos="zoom-in">{!! getKeyText('virtual_office_home_text') !!}</div>
                         <div class="text-end">
                             <a href="{{ route('virtual_office') }}" class="fw-bold">
-                                {!! getText('read_more') !!}
+                                {!! getKeyText('read_more') !!}
                             </a>
                         </div>
                     </div>
@@ -421,17 +421,17 @@
                 </div>
                 <div class="col-md-5 ms-auto">
                     <h2 class="display-2 mb-4" data-aos="fade-down">
-                        {!! getText('interesting') !!} ?
+                        {!! getKeyText('interesting') !!} ?
                     </h2>
-                    <div class="display-6 mb-4" data-aos="zoom-in">{!! getText('the_next_step_is_up_to_you') !!}</div>
+                    <div class="display-6 mb-4" data-aos="zoom-in">{!! getKeyText('the_next_step_is_up_to_you') !!}</div>
                     <div class="d-flex justify-content-left" data-aos="fade-up">
                         <a href="{{ route('contact') }}" class="btn-container text-uppercase" style="min-width: 35%;">
                             <div class="p-3 btn-child-1 bg-primary-color">
-                                <span class="fw-bold">{!! getText('write') !!}</span>
-                                <span>{!! getText('to_us') !!}</span>
+                                <span class="fw-bold">{!! getKeyText('write') !!}</span>
+                                <span>{!! getKeyText('to_us') !!}</span>
                             </div>
 
-                            <div class="p-3 btn-child-2 bg-secondary-color">{!! getText('contact') !!}</div>
+                            <div class="p-3 btn-child-2 bg-secondary-color">{!! getKeyText('contact') !!}</div>
                         </a>
                     </div>
                 </div>

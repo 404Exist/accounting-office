@@ -1,4 +1,4 @@
-@extends('layout.app', ['title' => getText('contact')])
+@extends('layout.app', ['title' => getKeyText('contact')])
 
 @section('content')
     <div style="height: 10vw"></div>
@@ -12,8 +12,8 @@
             <div class="mb-4 row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-8">
-                    <h2 class="text-ucfirst display-3 mb-5 fw-bold" data-aos="fade-down">{!! getText('write') !!}
-                        {!! getText('to_us') !!} !</h2>
+                    <h2 class="text-ucfirst display-3 mb-5 fw-bold" data-aos="fade-down">{!! getKeyText('write') !!}
+                        {!! getKeyText('to_us') !!} !</h2>
                 </div>
             </div>
 
@@ -32,7 +32,7 @@
                     </div>
                 @endif
                 <div class="mb-5 row">
-                    <label for="name" class="col-sm-4 col-form-label text-ucfirst">{!! getText('your_name_and_surname_and_the_name_of_the_company') !!}</label>
+                    <label for="name" class="col-sm-4 col-form-label text-ucfirst">{!! getKeyText('your_name_and_surname_and_the_name_of_the_company') !!}</label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control @error('name')is-invalid @enderror" id="name"
                             name="name" value="{{ old('name') }}">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="mb-5 row">
-                    <label for="phone" class="col-sm-4 col-form-label text-ucfirst">{!! getText('phone_number') !!}</label>
+                    <label for="phone" class="col-sm-4 col-form-label text-ucfirst">{!! getKeyText('phone_number') !!}</label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control @error('phone')is-invalid @enderror" id="phone"
                             name="phone" value="{{ old('phone') }}">
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="mb-5 row">
-                    <label for="email" class="col-sm-4 col-form-label text-ucfirst">{!! getText('email_address') !!}</label>
+                    <label for="email" class="col-sm-4 col-form-label text-ucfirst">{!! getKeyText('email_address') !!}</label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control @error('email')is-invalid @enderror" id="email"
                             name="email" value="{{ old('email') }}">
@@ -62,23 +62,23 @@
                     </div>
                 </div>
                 <div class="mb-5 row">
-                    <label for="subject" class="col-sm-4 col-form-label text-ucfirst">{!! getText('we_will_talk_about') !!}:</label>
+                    <label for="subject" class="col-sm-4 col-form-label text-ucfirst">{!! getKeyText('we_will_talk_about') !!}:</label>
                     <div class="col-sm-8">
                         <select class="form-control text-capitalize @error('subject')is-invalid @enderror" name="subject"
                             id="subject">
-                            <option value="">{!! getText('choose') !!}</option>
-                            <option @selected(old('subject') == 'Usługach księgowych') value="Usługach księgowych">{!! getText('accounting_services') !!}
+                            <option value="">{!! getKeyText('choose') !!}</option>
+                            <option @selected(old('subject') == 'Usługach księgowych') value="Usługach księgowych">{!! getKeyText('accounting_services') !!}
                             </option>
-                            <option @selected(old('subject') == 'Doradztwie podatkowym') value="Doradztwie podatkowym">{!! getText('tax_consultancy') !!}
+                            <option @selected(old('subject') == 'Doradztwie podatkowym') value="Doradztwie podatkowym">{!! getKeyText('tax_consultancy') !!}
                             </option>
-                            <option @selected(old('subject') == 'Pomocy w założeniu firmy') value="Pomocy w założeniu firmy">{!! getText('help_in_setting_up_a_business') !!}
+                            <option @selected(old('subject') == 'Pomocy w założeniu firmy') value="Pomocy w założeniu firmy">{!! getKeyText('help_in_setting_up_a_business') !!}
                             </option>
-                            <option @selected(old('subject') == 'Usłudze Wirtualnego Biura') value="Usłudze Wirtualnego Biura">{!! getText('virtual') !!}
-                                {!! getText('office') !!}</option>
-                            <option @selected(old('subject') == 'Rozliczeniu PIT') value="Rozliczeniu PIT">{!! getText('pit_settlement') !!}</option>
-                            <option @selected(old('subject') == 'Współpracy') value="Współpracy">{!! getText('team_work') !!}</option>
-                            <option @selected(old('subject') == 'Reklamacji') value="Reklamacji">{!! getText('complaints') !!}</option>
-                            <option @selected(old('subject') == 'Innej sprawie') value="Innej sprawie">{!! getText('another_matter') !!}</option>
+                            <option @selected(old('subject') == 'Usłudze Wirtualnego Biura') value="Usłudze Wirtualnego Biura">{!! getKeyText('virtual') !!}
+                                {!! getKeyText('office') !!}</option>
+                            <option @selected(old('subject') == 'Rozliczeniu PIT') value="Rozliczeniu PIT">{!! getKeyText('pit_settlement') !!}</option>
+                            <option @selected(old('subject') == 'Współpracy') value="Współpracy">{!! getKeyText('team_work') !!}</option>
+                            <option @selected(old('subject') == 'Reklamacji') value="Reklamacji">{!! getKeyText('complaints') !!}</option>
+                            <option @selected(old('subject') == 'Innej sprawie') value="Innej sprawie">{!! getKeyText('another_matter') !!}</option>
                         </select>
                         @error('subject')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -86,7 +86,7 @@
                     </div>
                 </div>
                 <div class="mb-5 row">
-                    <label for="message" class="col-sm-4 col-form-label text-ucfirst">{!! getText('a_few_more_words_from_you') !!}</label>
+                    <label for="message" class="col-sm-4 col-form-label text-ucfirst">{!! getKeyText('a_few_more_words_from_you') !!}</label>
                     <div class="col-sm-8">
                         <textarea class="form-control @error('message')is-invalid @enderror" id="message" name="message"
                             style="min-height: 150px;">{{ old('message') }}</textarea>
@@ -99,9 +99,9 @@
                     <div class="col-sm-4"></div>
                     <div class="col-sm-8 d-flex">
                         <button class="btn-container text-uppercase btn w-25" type="submit">
-                            <div class="p-3 btn-child-1 bg-primary-color">{!! getText('send') !!}</div>
+                            <div class="p-3 btn-child-1 bg-primary-color">{!! getKeyText('send') !!}</div>
 
-                            <div class="p-3 btn-child-2 bg-secondary-color">{!! getText('send') !!}</div>
+                            <div class="p-3 btn-child-2 bg-secondary-color">{!! getKeyText('send') !!}</div>
                         </button>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
     <section>
         <div class="accounting-office features container-fluid">
             {{-- <div class="description text-center container">
-            <h1 class="display-2 mb-4" data-aos="fade-down">{!! getText('contact_us') !!} !</h1>
+            <h1 class="display-2 mb-4" data-aos="fade-down">{!! getKeyText('contact_us') !!} !</h1>
             <hr class="opacity-100 my-4 mx-auto w-25" />
 
             <div class="row justify-content-center mt-5" data-aos="zoom-in">
@@ -125,9 +125,9 @@
                         </g>
                     </svg>
 
-                    <strong class="text-capitalize">{!! getText('telephone') !!}</strong>
+                    <strong class="text-capitalize">{!! getKeyText('telephone') !!}</strong>
                     <p>
-                        <a href="tel:{{ str_replace(' ', '', getSetting('tel')) }}" class="fs-5">{{ getSetting('tel') }}</a>
+                        <a href="tel:{{ str_replace(' ', '', getKeySetting('tel')) }}" class="fs-5">{{ getKeySetting('tel') }}</a>
                     </p>
                 </div>
                 <div class="col-md-3" data-aos="zoom-in">
@@ -138,9 +138,9 @@
                             <path fill="#FEFEFE" d="M370.6,430.5c9.1,2.6,17.6,7.1,24.8,13.3c2.6,2.1,6.5,1.7,8.6-1c2-2.5,1.7-6.2-0.7-8.3 c-8.7-7.6-19-13-30.1-15.9l-3.7-1c-5.8-1.4-11.9,0.5-15.9,4.9c-13.7,15.9-31,16.7-49.3,16.7s-35.3-1.3-49-16.7 c-3.9-4.5-10.1-6.4-15.9-4.9l-3.7,1c-25.7,7-45.8,26.8-53.2,52.4l-5.2,17.9h-52.4c-0.8,0-1.6-0.3-2.1-1c-0.6-0.7-0.8-1.6-0.6-2.5 l10.2-36.3c8.7-28.8,27-38.1,59.8-45.9c0.6,0,1,0,1.6-0.6c2.1,1.5,4.7,3.1,6.8,4.4c0.8,0.5,1.8,0.7,2.8,0.6 c2.3-0.1,4.4-1.4,5.6-3.4c1.4-3,0.3-6.6-2.5-8.3c-18.3-9.3-31.7-36.3-31.7-63.5c-0.1-24.9,20-45.2,44.9-45.2c0.1,0,0.2,0,0.3,0 c7.3,0.1,14.5,1.8,21,5.2c-3.8,8.9-5.8,18.5-5.9,28.2c0,52.9,31.7,97.6,70,97.6s70-45.6,70-97.6c0-38.7-31.4-70.1-70.1-70.1 c-23.3,0-45.1,11.6-58.2,31l0,0c-28.2-14.7-63-3.8-77.7,24.4c-4.3,8.2-6.5,17.4-6.5,26.7c-0.2,21.9,7.1,43.3,20.8,60.4 c-28.2,7.1-51.7,17.7-62.5,53l-10.4,36c-2.1,8.2,2.9,16.6,11.1,18.7c1.1,0.3,2.3,0.4,3.4,0.5h48.3l-4.4,14.5 c-1.6,5.2-0.6,10.9,2.8,15.2c3.4,4.4,8.7,7.1,14.3,7.1h131.6c3.4,0,6.2-2.8,6.2-6.2s-2.8-6.2-6.2-6.2H186c-2.8,0-5-2.3-4.9-5.1 c0-0.5,0.1-1,0.2-1.4l13-45.2c6.3-21.4,23.3-38,44.9-43.7l3.7-1c1.3-0.2,2.6,0.3,3.4,1.3c17.1,19.5,38.1,21,58.6,21 c20.5,0,41.5-1.6,58.6-21l0,0c0.8-0.8,2-1.1,3.1-1L370.6,430.5z M305.2,262.9c25.1,0.1,47.2,16.3,54.8,40.2 c-11.1,2.2-22.5-2.3-29.1-11.4c-1.9-2.7-5.7-3.4-8.4-1.5c-0.1,0.1-0.2,0.1-0.2,0.2c-1.1,0.7-1.8,1.8-2.1,3.1c0,0,0,0.6-0.6,1 c-8.7,17.6-37.8,25.1-71.4,18.6c3.8-28.6,28.1-50,57-50.2H305.2z M271.4,327.7c24.8,0,45.2-7.9,55.6-22.3 c7.6,6.8,17.4,10.5,27.5,10.6c2.7,0,5.3-0.3,7.9-1c0.2,1.7,0.2,3.5,0,5.2c0,45.6-27,85.5-57.6,85.5c-29.4,0-55.6-36.9-57.6-80.2 c7.9,1.4,15.8,2.2,23.8,2.1L271.4,327.7z"/>
                         </g>
                     </svg>
-                    <strong class="text-capitalize">{!! getText('mail') !!}</strong>
+                    <strong class="text-capitalize">{!! getKeyText('mail') !!}</strong>
                     <p>
-                        <a href="mailto:{{ str_replace(' ', '', getSetting('mail')) }}" class="fs-5">{{ getSetting('mail') }}</a>
+                        <a href="mailto:{{ str_replace(' ', '', getKeySetting('mail')) }}" class="fs-5">{{ getKeySetting('mail') }}</a>
                     </p>
                 </div>
                 <div class="col-md-3" data-aos="zoom-in">
@@ -150,9 +150,9 @@
                         <path fill="#FFFFFF" d="M348.6,304.5l-2.5-1.5l-2.5-1.5c-2.8-1.6-6.3-0.7-7.9,2.1c0,0,0,0,0,0c-1.5,2.8-0.5,6.3,2.1,7.9l2.5,1.5 c0.9,0.6,1.8,1.1,2.8,1.5c0.9,0.6,2,0.9,3.1,1c2.2,0.1,4.2-1.1,5.2-3.1c1.3-2.9,0.3-6.3-2.5-7.9L348.6,304.5z"/>
                         <path fill="#FFFFFF" d="M297.6,288.9c-25.9,0-50.6,11.4-67.5,31c-2.1,2.6-1.8,6.4,0.6,8.6c1.1,0.9,2.5,1.5,4,1.5 c1.8,0.1,3.5-0.7,4.6-2.1c14.7-16.9,35.9-26.7,58.3-26.7c5.6,0,11.1,0.6,16.6,1.8c3.3,0.6,6.5-1.4,7.4-4.6c0.6-3.3-1.4-6.5-4.6-7.4 C310.7,289.5,304.2,288.7,297.6,288.9L297.6,288.9z"/>
                     </svg>
-                    <strong class="text-capitalize">{!! getText('contact') !!}</strong>
+                    <strong class="text-capitalize">{!! getKeyText('contact') !!}</strong>
                     <p>
-                        <a href="#" class="fs-5">{!! getText('write') !!} {!! getText('to_us') !!}!</a>
+                        <a href="#" class="fs-5">{!! getKeyText('write') !!} {!! getKeyText('to_us') !!}!</a>
                     </p>
                 </div>
             </div>
@@ -161,22 +161,22 @@
                 <div class="col-md-6 mt-5 p-5" data-aos="zoom-in">
                     <div class="row">
                         <div class="col-6">
-                            <h5 class="text-capitalize fw-bold">{{ getSetting('app_name') }}</h5>
-                            <p>{!! getText('main_customer_service_office') !!}</p>
-                            <p>{{ getSetting('customer_service') }}</p>
+                            <h5 class="text-capitalize fw-bold">{{ getKeySetting('app_name') }}</h5>
+                            <p>{!! getKeyText('main_customer_service_office') !!}</p>
+                            <p>{{ getKeySetting('customer_service') }}</p>
                         </div>
                         <div class="col-6">
-                            <h6 class="text-capitalize fw-bold">{!! getText('address') !!}</h6>
-                            <p>{{ getSetting('address') }}</p>
-                            <h6 class="text-capitalize fw-bold">{!! getText('mail') !!}</h6>
-                            <p>{{ getSetting('mail') }}</p>
-                            <h6 class="text-capitalize fw-bold">{!! getText('telephone') !!}</h6>
-                            <p>{{ getSetting('tel') }}</p>
+                            <h6 class="text-capitalize fw-bold">{!! getKeyText('address') !!}</h6>
+                            <p>{{ getKeySetting('address') }}</p>
+                            <h6 class="text-capitalize fw-bold">{!! getKeyText('mail') !!}</h6>
+                            <p>{{ getKeySetting('mail') }}</p>
+                            <h6 class="text-capitalize fw-bold">{!! getKeyText('telephone') !!}</h6>
+                            <p>{{ getKeySetting('tel') }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-right">
-                    <iframe class="w-100 h-100" title="Location" src="{{ getSetting('google_map_embed_link') }}"
+                    <iframe class="w-100 h-100" title="Location" src="{{ getKeySetting('google_map_embed_link') }}"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                         frameborder="0"></iframe>
                 </div>

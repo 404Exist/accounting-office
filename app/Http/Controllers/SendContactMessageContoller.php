@@ -11,12 +11,12 @@ class SendContactMessageContoller extends Controller
     public function __invoke(SendContactMessageRequest $request)
     {
         try {
-            Notification::route('mail', str_replace(' ', '', getSetting('mail')))
+            Notification::route('mail', str_replace(' ', '', getKeySetting('mail')))
                 ->notify(new ContactNotification((object) $request->validated()));
 
-                return back()->with('success', getText('contact_email_sent_sucessfully'));
+            return back()->with('success', getKeyText('contact_email_sent_sucessfully'));
         } catch (\Exception $error) {
-            return back()->with('error', getText('contact_email_not_sent'));
+            return back()->with('error', getKeyText('contact_email_not_sent'));
         }
     }
 }

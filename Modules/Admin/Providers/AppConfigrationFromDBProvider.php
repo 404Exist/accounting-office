@@ -28,7 +28,7 @@ class AppConfigrationFromDBProvider extends ServiceProvider
 
     protected function singleton(string $appKey, string $cacheKey, callable $closure)
     {
-        $this->app->singleton($appKey, fn() => $this->cache($cacheKey, $closure));
+        $this->app->singleton($appKey, fn () => $this->cache($cacheKey, $closure));
     }
 
     protected function cache(string $key, callable $closure)
@@ -38,9 +38,9 @@ class AppConfigrationFromDBProvider extends ServiceProvider
 
     protected function setAppConfigruation()
     {
-        $this->app->setLocale(getSetting('default_locale', "en"));
+        $this->app->setLocale(getKeySetting('default_locale', "en"));
 
-        config(['app.name' => ucwords(getSetting('app_name', "404exist"))]);
+        config(['app.name' => ucwords(getKeySetting('app_name', "404exist"))]);
 
         $this->setLaravelPWA();
 
@@ -49,25 +49,25 @@ class AppConfigrationFromDBProvider extends ServiceProvider
 
     protected function setLaravelPWA()
     {
-        config(['laravelpwa.manifest.name' => getSetting('app_name')]);
-        config(['laravelpwa.manifest.short_name' => getSetting('app_name')]);
-        config(['laravelpwa.manifest.background_color' => getSetting('primary_color')]);
-        config(['laravelpwa.manifest.theme_color' => getSetting('secondary_color')]);
+        config(['laravelpwa.manifest.name' => getKeySetting('app_name')]);
+        config(['laravelpwa.manifest.short_name' => getKeySetting('app_name')]);
+        config(['laravelpwa.manifest.background_color' => getKeySetting('primary_color')]);
+        config(['laravelpwa.manifest.theme_color' => getKeySetting('secondary_color')]);
     }
 
     protected function setAppMailProvider()
     {
         config(['mail.mailers.smtp' => [
             'transport' => 'smtp',
-            'host' => getSetting('MAIL_HOST', 'smtp.mailgun.org'),
-            'port' => getSetting('MAIL_PORT', 587),
-            'encryption' => getSetting('MAIL_ENCRYPTION', 'tls'),
-            'username' => getSetting('MAIL_USERNAME'),
-            'password' => getSetting('MAIL_PASSWORD'),
+            'host' => getKeySetting('MAIL_HOST', 'smtp.mailgun.org'),
+            'port' => getKeySetting('MAIL_PORT', 587),
+            'encryption' => getKeySetting('MAIL_ENCRYPTION', 'tls'),
+            'username' => getKeySetting('MAIL_USERNAME'),
+            'password' => getKeySetting('MAIL_PASSWORD'),
             'timeout' => null,
-            'local_domain' => getSetting('MAIL_EHLO_DOMAIN'),
+            'local_domain' => getKeySetting('MAIL_EHLO_DOMAIN'),
         ]]);
 
-        config(['mail.from.address' => getSetting('MAIL_FROM_ADDRESS', 'hello@example.com')]);
+        config(['mail.from.address' => getKeySetting('MAIL_FROM_ADDRESS', 'hello@example.com')]);
     }
 }
