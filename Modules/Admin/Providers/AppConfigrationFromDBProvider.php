@@ -14,6 +14,10 @@ class AppConfigrationFromDBProvider extends ServiceProvider
 
     public function register()
     {
+        if ($this->app->runningInConsole()) {
+            return;
+        }
+
         $this->singleton('site_settings', (new Setting())->getTable(), fn () => Setting::pluck('value', 'key'));
         $this->singleton('site_texts', (new Text())->getTable(), fn () => Text::pluck('value', 'key'));
         $this->singleton('site_images', (new PageImage())->getTable(), fn () => PageImage::get());
