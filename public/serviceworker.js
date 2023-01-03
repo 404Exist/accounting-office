@@ -1,4 +1,4 @@
-var staticCacheName = "pwa-v" + new Date().getTime();
+var staticCacheName = "pwa-v-1";
 var filesToCache = [
     '/offline',
     '/build/assets/app-73168167.css',
