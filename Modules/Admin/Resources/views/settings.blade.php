@@ -21,6 +21,14 @@
                 type="text" id="app_name" name="app_name" placeholder="App Name"
                 value="{{ getKeySetting('app_name') }}" />
         </div>
+        {{-- App Description --}}
+        <div class="mb-6">
+            <label class="d-block mb-2" for="app_description">App Description</label>
+            <input
+                class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                type="text" id="app_description" name="app_description" placeholder="App Description"
+                value="{{ getKeySetting('app_description') }}" />
+        </div>
         {{-- Default Locale --}}
         <div class="mb-6">
             <label class="d-block mb-2" for="default_locale">Default Locale</label>

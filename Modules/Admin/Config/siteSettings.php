@@ -6,6 +6,10 @@ return [
         'value' => "nazwa aplikacji"
     ],
     [
+        "key" => 'app_description',
+        'value' => "Nowoczesne biuro rachunkowe w Gdańsku. Łączymy zalety tradycyjnego biura rachunkowego z narzędziami online XXI wieku. Odkryj nową jakość księgowości w Gdańsku!"
+    ],
+    [
         "key" => 'default_locale',
         'value' => "pl"
     ],

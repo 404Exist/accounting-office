@@ -25,6 +25,13 @@ if (!function_exists('getKeyText')) {
     }
 }
 
+if (!function_exists('removeHtmlTagsFromStr')) {
+    function removeHtmlTagsFromStr(string $string)
+    {
+        return preg_replace('/<[^>]*>/', '', $string);
+    }
+}
+
 if (!function_exists('getPageImage')) {
     function getPageImage(int $order, string $pageRouteName = null, string $key = "url")
     {

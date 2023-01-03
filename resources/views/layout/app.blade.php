@@ -5,19 +5,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Biuro rachunkowe Gdańsk - kancelaria | Księgowość nr 1 w Trójmieście">
-    <meta property="og:site_name" content="Strefa użytkownika">
-    <meta property="og:description"
-        content="Nowoczesne biuro rachunkowe w Gdańsku. Łączymy zalety tradycyjnego biura rachunkowego z narzędziami online XXI wieku. Odkryj nową jakość księgowości w Gdańsku!">
+    <meta property="og:title" content="{{ removeHtmlTagsFromStr($title) }} - {{ getKeySetting('app_name') }}">
+    <meta property="og:site_name" content="{{ getKeySetting('app_name') }}">
+    <meta property="og:description" content="{{ getKeySetting('app_description') }}">
     <meta property="og:url" content="{{ config('app.url') }}">
     <meta property="og:image" content="{{ getPageImage(3, 'global') }}">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="1277">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pl_PL">
-    <title>{{ $title }} - {{ getKeySetting('app_name') }}</title>
-    <meta name="description"
-        content="Nowoczesne biuro rachunkowe w Gdańsku. Łączymy zalety tradycyjnego biura rachunkowego z narzędziami online XXI wieku. Odkryj nową jakość księgowości w Gdańsku!">
+    <title>{{ removeHtmlTagsFromStr($title) }} - {{ getKeySetting('app_name') }}</title>
+    <meta name="description" content="{{ getKeySetting('app_description') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ getPageImage(1, 'global') }}">
     <link rel="canonical" href="{{ config('app.url') }}" />
     @laravelPWA
