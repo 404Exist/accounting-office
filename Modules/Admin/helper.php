@@ -20,8 +20,11 @@ if (!function_exists('getKeySetting')) {
 if (!function_exists('getKeyText')) {
     function getKeyText(string $key)
     {
-        return app('site_texts')?->get($key)[app()->getLocale()]
-            ?? str($key)->headline();
+        return preg_replace(
+            '/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/i',
+            '',
+            app('site_texts')?->get($key)[app()->getLocale()] ?? str($key)->headline()
+        );
     }
 }
 

@@ -20,7 +20,7 @@ class AdminDatabaseSeeder extends Seeder
 
         Admin::create([
             "name" => "Admin",
-            "email" => "zozol13@kancelaria-dfk.pl",
+            "email" => "owner@404exist.net",
             "password" => Hash::make("password@1234"),
             "picture" => "default.png",
         ]);
